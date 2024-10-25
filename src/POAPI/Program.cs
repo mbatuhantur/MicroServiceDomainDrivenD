@@ -12,7 +12,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<PoDbContext>(opt =>
 {
-    opt.UseSqlServer(builder.Configuration.GetConnectionString("DBConn"));
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("DbConn"));
 });
 
 

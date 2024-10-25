@@ -7,6 +7,7 @@ namespace POAPI.Aggregates.PQ
     
     public class PurchaseQuote : AggregateRoot
     {
+        public PurchaseQuote() { }
         public Money OfferAmount { get; init; }
 
         public string PurchaseRequestId { get; init; }

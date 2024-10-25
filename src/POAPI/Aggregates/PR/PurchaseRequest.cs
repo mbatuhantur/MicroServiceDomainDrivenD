@@ -5,6 +5,7 @@ namespace POAPI.Aggregates.PO
 {
     public class PurchaseRequest:AggregateRoot
     {
+        public PurchaseRequest() { }
         public string Description { get; set; }
 
         public PurchaseRequestStatus Status { get; private set; }

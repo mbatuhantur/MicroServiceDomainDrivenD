@@ -5,6 +5,7 @@ namespace POAPI.Aggregates.PO
 {
     public class PurchaseOrder : AggregateRoot
     {
+        public PurchaseOrder() { }
         public string PurchaseQuoteId { get; init; }
         public string PurchaseRequestId { get; init; }
 

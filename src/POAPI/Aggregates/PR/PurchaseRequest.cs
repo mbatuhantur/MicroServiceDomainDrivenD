@@ -27,5 +27,10 @@ namespace POAPI.Aggregates.PO
         {
             Status = PurchaseRequestSatus.Canceled;
         }
+
+        public void Complete()
+        {
+            Status = PurchaseRequestSatus.Complete;
+        }
     }
 }

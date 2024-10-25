@@ -27,6 +27,7 @@ namespace POAPI.Aggregates.PQ
         public void TransformAsOrder()
         {
             Status = PurchaseQuoteStatus.Approved;
+            AddEvent(new TransformAsOrdered(PurchaseRequestId,Id));
             // Event fırlatıp Order oluştur.
         }
 

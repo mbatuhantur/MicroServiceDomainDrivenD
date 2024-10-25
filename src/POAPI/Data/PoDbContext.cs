@@ -7,6 +7,8 @@ namespace POAPI.Data
 {
     public class PoDbContext :DbContext
     {
+        public PoDbContext(DbContextOptions<PoDbContext> options) : base(options) { }
+
         public DbSet<PurchaseRequest> PurchaseRequests { get; set; }   
         public DbSet<PurchaseQuote> PurchaseQuote { get; set; }   
         public DbSet<PurchaseOrder> PurchaseOrder { get; set; }

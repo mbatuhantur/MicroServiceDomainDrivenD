@@ -7,15 +7,15 @@ namespace POAPI.Aggregates.PO
     {
         public string Description { get; set; }
 
-        public PurchaseRequestSatus Status { get; private set; }
-        public Money Buget {  get; init; }
+        public PurchaseRequestStatus Status { get; private set; }
+        public Money Budget {  get; init; }
 
-        private PurchaseRequest(Money buget, string description)
+        private PurchaseRequest(Money budget, string description)
         {
             
             Description = description;
-            Status = PurchaseRequestSatus.Submitted;
-            Buget = buget;
+            Status = PurchaseRequestStatus.Submitted;
+            Budget = budget;
         }
 
         private PurchaseRequest Create(Money buget, string description)
@@ -25,12 +25,12 @@ namespace POAPI.Aggregates.PO
 
         public void Cancel()
         {
-            Status = PurchaseRequestSatus.Canceled;
+            Status = PurchaseRequestStatus.Canceled;
         }
 
         public void Complete()
         {
-            Status = PurchaseRequestSatus.Complete;
+            Status = PurchaseRequestStatus.Complete;
         }
     }
 }
